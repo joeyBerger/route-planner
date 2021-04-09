@@ -64,13 +64,16 @@ int main(int argc, const char **argv)
     };
     std::vector<float> user_input;
     int idx = 0;
-    while (idx < QUESTIONS) {
+    while (idx < QUESTIONS && false) {
         std::cout << inputQuestions[idx++];
         float input;
         std::cin >> input;
         user_input.push_back(input);
     }
-    float start_x = user_input[0], start_y = user_input[1], end_x = user_input[2], end_y = user_input[3];
+    // float start_x = user_input[0], start_y = user_input[1], end_x = user_input[2], end_y = user_input[3];
+    float start_x = 40, start_y = 50, end_x = 60, end_y = 70;
+    std::cout << "temp hard-coding values\n";
+
 
     // Build Model.
     RouteModel model{osm_data};
